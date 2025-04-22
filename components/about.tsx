@@ -46,7 +46,7 @@ export default function About() {
             API integration, and app deployment—crafting user-friendly 
             interfaces, secure and scalable systems. I’m also exploring the
             frontier of AI Integration, working hands-on with cutting-edge tools
-            to build intelligent applications. I'm driven by a
+            to build intelligent applications.  I build custom  programs ranging from small to large scale business. I'm driven by a
             mission to solve real-world problems by leveraging technology to deliver value and impactful change locally and globally. 
             Let’s build the future—one line of code at a time
           </p>
