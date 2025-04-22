@@ -14,7 +14,7 @@ export default function Footer() {
 
   const socialLinks = [
     { icon: <Github className="h-5 w-5" />, label: "GitHub", href: "https://github.com/Abdul1013" },
-    { icon: <Linkedin className="h-5 w-5" />, label: "LinkedIn", href: "www.linkedin.com/in/abdulthedev" },
+    { icon: <Linkedin className="h-5 w-5" />, label: "LinkedIn", href: "https://www.linkedin.com/in/abdulthedev/" },
     { icon: <Twitter className="h-5 w-5" />, label: "Twitter", href: "https://x.com/abdulthedev?s=21&t=UjMu7J55mFPoIq0r6jZmNg" },
     { icon: <Mail className="h-5 w-5" />, label: "Email", href: "mailto:abdulhaqabdulrasheed@gmail.com" },
   ]
