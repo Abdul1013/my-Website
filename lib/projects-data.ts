@@ -11,13 +11,13 @@ export const projectsData = [
     live: "https://car-ecommerce-demo.vercel.app",
     features: [
       "Advanced search and filtering system",
-      "Secure payment processing with Stripe",
+      "Secure payment processing with Paypal",
       "Comprehensive inventory management",
       "User authentication and profiles",
       "Order tracking and history",
       "Admin dashboard for dealers",
     ],
-    technologies: ["Django", "PostgreSQL", "Bootstrap", "PayPall API"],
+    technologies: ["Django", "SQLlite", "Bootstrap", "PayPall API"],
     collaborated: true,
     challenge:
       "Creating a scalable platform that could handle thousands of vehicle listings with complex filtering options while maintaining performance.",
