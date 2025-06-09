@@ -105,13 +105,13 @@ function ProjectCard({ project }: { project: Project }) {
   return (
     <Card className="w-full rounded-none overflow-hidden border-0 shadow-md hover:shadow-lg transition-shadow">
       <div className="flex flex-col">
-              {/* <div className="grid grid-cols-1 lg:grid-cols-5 gap-6"></div> */}
-        <div className="flex w-full relative h-64 lg:h-full">
+              {/* <div className="grid grid-cols-1 lg:grid-cols-5 gap-6"> */}
+        <div className="flex w-full relative h-64 ">
           <Image
             src={project.image || "/placeholder.svg?height=400&width=600"}
             alt={project.title}
             fill
-            className="object-cover"
+            className="object-contain"
           />
         </div>
 

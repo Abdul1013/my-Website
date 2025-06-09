@@ -41,14 +41,17 @@ export default function About() {
           className="space-y-6"
         >
           <p className="text-lg">
-            I'm a Builder with a passion for building impactful
-            digital solutions. I build smart, secure, maintainable, scalable 
-            and crafting user-friendly 
-            interfaces. I’m also exploring the
-            frontier of AI Integration, working hands-on with cutting-edge tools
-            to build intelligent applications.  I build custom  programs ranging from small to large scale business. I'm driven by a
-            mission to solve real-world problems by leveraging technology to deliver value and impactful change locally and globally. 
-            Let’s build the future—one line of code at a time
+            I'm a builder with a passion for engineering impactful digital
+            solutions. I specialize in creating smart, secure, scalable, and
+            maintainable systems, with a strong focus on crafting user-friendly
+            interfaces that elevate user experiences. Currently, I'm exploring
+            the frontier of AI integration, working hands-on with cutting-edge
+            tools to develop intelligent, future-ready applications. From small
+            startups to large-scale enterprises, I build custom solutions
+            tailored to real business needs. I'm driven by a mission to solve
+            real-world problems through technology—delivering meaningful value
+            and transformative change both locally and globally. Let’s build the
+            future, one line of code at a time.
           </p>
         </motion.div>
 
@@ -77,13 +80,12 @@ export default function About() {
                 <h3 className="text-xl font-semibold">Problem Solver</h3>
                 <p>
                   Analytical thinker who enjoys tackling complex challenges and
-                  finding innovative solutions with latest technologies to deliver 
-                  industry standard solutions.
+                  finding innovative solutions with latest technologies to
+                  deliver industry standard solutions.
                 </p>
               </div>
             </CardContent>
           </Card>
-
         </div>
       </div>
     </section>
