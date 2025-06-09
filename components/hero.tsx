@@ -68,7 +68,7 @@ export default function Hero() {
               </h2>
 
               <p className="text-lg mb-8 text-muted-foreground max-w-2xl mx-auto lg:mx-0">
-                IT Guy with a strong focus on mobile and web application
+                IT Guy with a strong focus on  application
                 development, AI integration, and cybersecurity. I design and
                 engineer innovative digital solutions that address real-world
                 challenges, blending technical precision with creative
