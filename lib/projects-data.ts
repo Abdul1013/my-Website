@@ -24,29 +24,29 @@ export const projectsData = [
       "Built a Firebase-backed web app with real-time data, school-based filtering, and modular components to support rapid scaling across campuses.",
   },
   {
-  id: 2,
-  title: "TrybeMarket",
-  description:
-    "A campus-focused e-commerce platform for students to buy and sell products, services, and skills within their school community — fostering trust and entrepreneurship.",
-  image: "/trybemarketm.png",
-  tags: ["React Native", "Firebase", "Expo Go"],
-  category: "mobile",
-  github: "https://github.com/trybenode/marketTrybe",
-  live: "https://trybemarket-demo.vercel.app",
-  features: [
-    "List and manage products or services from a mobile device",
-    "Chat with verified campus buyers and sellers",
-    "Secure in-app transactions and notifications",
-    "School-based market filtering",
-    "Seller verification for trust and safety",
-  ],
-  technologies: ["React Native", "noSql", "Push Notifications", "Expo"],
-  collaborated: true,
-  challenge:
-    "Building a mobile-first platform that balances speed, simplicity, and trust while supporting students with limited technical experience.",
-  solution:
-    "Developed a lightweight, intuitive mobile app using React Native and Firebase to ensure seamless onboarding, product listing, and communication for student users.",
-},
+    id: 2,
+    title: "TrybeMarket",
+    description:
+      "A campus-focused e-commerce platform for students to buy and sell products, services, and skills within their school community — fostering trust and entrepreneurship.",
+    image: "/trybemarketm.png",
+    tags: ["React Native", "Firebase", "Expo Go"],
+    category: "mobile",
+    github: "https://github.com/trybenode/marketTrybe",
+    live: "https://trybemarket-demo.vercel.app",
+    features: [
+      "List and manage products or services from a mobile device",
+      "Chat with verified campus buyers and sellers",
+      "Secure in-app transactions and notifications",
+      "School-based market filtering",
+      "Seller verification for trust and safety",
+    ],
+    technologies: ["React Native", "noSql", "Push Notifications", "Expo"],
+    collaborated: true,
+    challenge:
+      "Building a mobile-first platform that balances speed, simplicity, and trust while supporting students with limited technical experience.",
+    solution:
+      "Developed a lightweight, intuitive mobile app using React Native and Firebase to ensure seamless onboarding, product listing, and communication for student users.",
+  },
   {
     id: 3,
     title: "Car E-commerce Platform",
@@ -113,10 +113,11 @@ export const projectsData = [
     image: "studentHub.png",
     tags: ["Next.js", "Groq", "Material UI", "Firebase"],
     category: "web",
-    github: "https://github.com/abdul1013/studyhub",
-    live: "https://studyhub-demo.vercel.app",
+    github: "https://github.com/Abdul1013/studyhub",
+    live: "https://studenthub-delta.vercel.app/",
     features: [
-      // "AI-powered study partner matching",
+      "AI-powered study card and quiz",
+      "Different study Mode",
       "Real-time collaborative document editing",
       // "Video conferencing integration",
       // "Resource library with search functionality",
@@ -145,8 +146,8 @@ export const projectsData = [
     image: "/Bitbuzz.png",
     tags: ["React", "Firebase", "Material UI"],
     category: "web",
-    github: "https://github.com/username/bitebuzz",
-   live: "", // Add TestFlight or APK link if available
+    github: "https://github.com/Abdul1013/bitebuzz",
+    live: "", // Add TestFlight or APK link if available
     features: [
       // "Real-time order tracking with map integration",
       "Personalized restaurant recommendations",
@@ -163,33 +164,37 @@ export const projectsData = [
     solution:
       "Implemented a robust real-time database with Firebase and integrated Google Maps API for precise location tracking and delivery time estimation.",
   },
- {
-  id: 7,
-  title: "EasyTopUp",
-  description:
-    "A mobile app built with React Native for students and everyday users to easily buy airtime, data, and make subscriptions for utilities like cable TV and electricity, all in one secure platform.",
-  image: "/easyTopUp.png", // update with the correct preview image
-  tags: ["React Native", "Firebase", "Paystack"],
-  category: "mobile",
-  github: "https://github.com/Abdul1013/EasyTopUp",
-  live: "", // Add TestFlight or APK link if available
-  features: [
-    "Airtime top-up for all major Nigerian networks",
-    "Mobile data purchase by bundle type",
-    "Cable TV (DSTV, GOTV, Startimes) subscriptions",
-    "Electricity bill payments",
-    "In-app payment with Paystack",
-    "User auth and transaction history",
-  ],
-  technologies: ["React Native", "Firebase", "Paystack API", "Expo", "Redux Toolkit"],
-  collaborated: true,
-  challenge:
-    "Designing a user-friendly interface that simplifies mobile top-ups while ensuring secure transactions and accurate service delivery.",
-  solution:
-    "Used Firebase for real-time database and authentication, and Paystack for handling secure, verified payments. Built a clean, responsive UI with Expo and integrated modular service APIs (e.g., VTpass).",
-}
-
-
+  {
+    id: 7,
+    title: "EasyTopUp",
+    description:
+      "A mobile app built with React Native for students and everyday users to easily buy airtime, data, and make subscriptions for utilities like cable TV and electricity, all in one secure platform.",
+    image: "/easyTopUp.png", // update with the correct preview image
+    tags: ["React Native", "Firebase", "Paystack"],
+    category: "mobile",
+    github: "https://github.com/Abdul1013/EasyTopUp",
+    live: "", // Add TestFlight or APK link if available
+    features: [
+      "Airtime top-up for all major Nigerian networks",
+      "Mobile data purchase by bundle type",
+      "Cable TV (DSTV, GOTV, Startimes) subscriptions",
+      "Electricity bill payments",
+      "In-app payment with Paystack",
+      "User auth and transaction history",
+    ],
+    technologies: [
+      "React Native",
+      "Firebase",
+      "Paystack API",
+      "Expo",
+      "Redux Toolkit",
+    ],
+    collaborated: true,
+    challenge:
+      "Designing a user-friendly interface that simplifies mobile top-ups while ensuring secure transactions and accurate service delivery.",
+    solution:
+      "Used Firebase for real-time database and authentication, and Paystack for handling secure, verified payments. Built a clean, responsive UI with Expo and integrated modular service APIs (e.g., VTpass).",
+  },
 
   // {
   //   id: 5,
