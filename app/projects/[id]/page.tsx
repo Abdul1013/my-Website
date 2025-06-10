@@ -16,7 +16,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { projectsData } from "@/lib/projects-data";
 
-export default function ProjectDetailPage({ params }) {
+export default function ProjectDetailPage({ params}) {
   const project = projectsData.find((p) => p.id.toString() === params.id);
 
   if (!project) {
