@@ -51,27 +51,28 @@ export default function Hero() {
                 <span>{currentDay}</span> • <span>{currentTime}</span>
               </div>
               <h1 className="text-xl md:text-2xl lg:text-2xl font-bold mb-6">
-
                 DESIGN • DEVELOP • INSPIRE
               </h1>
-                <motion.h4
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                  className="text-sm font-bold tracking-tighter"
-                >
-                  orchestrating AI | solving frontier Problem | Building the
-                  Impossible
-                </motion.h4>
+              <motion.h4
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="text-sm font-bold tracking-tighter"
+              >
+                orchestrating AI | solving frontier Problem | Building the
+                Impossible
+              </motion.h4>
 
               <h2 className="text-2xl md:text-3xl font-semibold mb-4">
                 Hi, I'm Abdulrasheed Olabanji
               </h2>
 
               <p className="text-lg mb-8 text-muted-foreground max-w-2xl mx-auto lg:mx-0">
-                A software engineer specializing in mobile and web app
-                development, AI integration, and cybersecurity. I Engineer
-                innovative solutions that solve real-world problems. 
+                IT Guy with a strong focus on mobile and web application
+                development, AI integration, and cybersecurity. I design and
+                engineer innovative digital solutions that address real-world
+                challenges, blending technical precision with creative
+                problem-solving to deliver impactful results.
               </p>
             </motion.div>
 

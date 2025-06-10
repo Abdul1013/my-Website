@@ -45,13 +45,7 @@ export default function Projects() {
         onValueChange={setActiveTab}
         className="w-full fade-in"
       >
-        {/* <TabsList className="grid w-full grid-cols-2 md:grid-cols-5 mb-8">
-          {categories.map((category) => (
-            <TabsTrigger key={category.id} value={category.id}>
-              {category.name}
-            </TabsTrigger>
-          ))}
-        </TabsList> */}
+      
 
         <TabsContent value={activeTab} className="mt-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -41,10 +41,10 @@ export default function About() {
           className="space-y-6"
         >
           <p className="text-lg">
-            I'm a Junior Software Engineer with a passion for building impactful
-            digital solutions. I specialize in frontend and backend development,
-            API integration, and app deployment—crafting user-friendly 
-            interfaces, secure and scalable systems. I’m also exploring the
+            I'm a Builder with a passion for building impactful
+            digital solutions. I build smart, secure, maintainable, scalable 
+            and crafting user-friendly 
+            interfaces. I’m also exploring the
             frontier of AI Integration, working hands-on with cutting-edge tools
             to build intelligent applications.  I build custom  programs ranging from small to large scale business. I'm driven by a
             mission to solve real-world problems by leveraging technology to deliver value and impactful change locally and globally. 
