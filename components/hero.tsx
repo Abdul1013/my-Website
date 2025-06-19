@@ -68,11 +68,14 @@ export default function Hero() {
               </h2>
 
               <p className="text-lg mb-8 text-muted-foreground max-w-2xl mx-auto lg:mx-0">
-                IT Guy with a strong focus on  application
-                development, AI integration, and cybersecurity. I design and
-                engineer innovative digital solutions that address real-world
-                challenges, blending technical precision with creative
-                problem-solving to deliver impactful results.
+                IT Guy driven by a deep curiosity and a hands-on approach to
+                technology. From writing software and integrating AI to
+                tinkering with hardware, IoT, and digital systems—I build,
+                break, and fix with purpose. I specialize in digital product
+                development, AI integration, and cybersecurity, creating
+                innovative solutions that solve real-world problems. As an early
+                adopter and lifelong learner, I’m always exploring the edge of
+                what's possible in tech.
               </p>
             </motion.div>
 
