@@ -134,6 +134,45 @@ export const projectsData = [
       "Re-architected the entire platform using Next.js and TypeScript for type safety and better performance, redesigned the UX with intuitive step-by-step workflows to simplify complex processes, implemented a unified service dashboard that reduces navigation complexity, integrated real-time tracking for transparency, and built a robust API layer that connects multiple service providers while maintaining a consistent user experience across all vehicle management needs.",
   },
   {
+  id: 5,
+  title: "ChillinPay",
+  description:
+    "A frictionless fintech payment platform built for Nigerian businesses to eliminate payment losses, inaccurate sales records, and time waste — enabling instant, no-signup payments with cutting-edge security and seamless integration.",
+  image: "/chillinpay-landing.png",
+  mobileImage: "/chillingpay.png",
+  tags: ["Next.js", "TailwindCSS", ],
+  category: "web",
+  github: "https://github.com/Abdul1013/payee",
+  mobileGithub: null,
+  live: "https://dashboard-ky1tfd13t-abdul1013s-projects.vercel.app/",
+  features: [
+    "No-signup payment experience for customers",
+    "Order tag-based instant payment processing",
+    "Multi-bank payment gateway integration",
+    "Real-time transaction tracking and notifications",
+    "Automated sales record management for businesses",
+    "Waitlist onboarding with email verification",
+    "Merchant dashboard for payment analytics",
+    "State-of-the-art encryption for secure transactions",
+    "Simple API integration for existing systems",
+    "Mobile-responsive payment interface",
+  ],
+  technologies: [
+    "Next.js",
+    "TypeScript",
+    "TailwindCSS",
+    "Framer Motion",
+    "SendGrid",
+    "Vercel",
+  ],
+  platforms: ["Web"],
+  collaborated: false,
+  challenge:
+    "Creating a payment solution that eliminates customer friction by removing signup requirements while maintaining security, building trust in Nigeria's fintech space, and providing businesses with accurate, real-time payment tracking without complex integration processes.",
+  solution:
+    "Developed a lightweight, algorithm-driven payment platform with order tag-based transactions that allow instant payments without user accounts, implemented enterprise-grade encryption for security, designed a beautiful landing page with engaging animations to communicate simplicity and trust, built a seamless merchant API that integrates in minutes, and created an intuitive dashboard that gives businesses real-time insights into their payment flows and sales records.",
+},
+  {
     id: 3,
     title: "Car E-commerce Platform",
     description:
