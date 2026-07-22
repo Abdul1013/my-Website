@@ -1,54 +1,359 @@
-export const projectsData = [
+export type ProjectImageCollection = string[] | Record<string, string>;
+
+export type ProjectRecord = {
+  id: number | string;
+  title: string;
+  description: string;
+  category?: string;
+  image?: string;
+  mobileImage?: string;
+  images?: ProjectImageCollection;
+  platforms?: string[];
+  links?: Record<string, Record<string, string>>;
+  github?: string;
+  gitHub?: string;
+  live?: string;
+  mobileGithub?: string | null;
+  tags: string[];
+  features: string[];
+  technologies: string[];
+  collaborated?: boolean;
+  challenge?: string;
+  solution?: string;
+};
+
+export function getProjectImages(project: Partial<ProjectRecord>) {
+  if (Array.isArray(project.images)) {
+    return project.images.filter(Boolean);
+  }
+
+  if (project.images && typeof project.images === "object") {
+    return Object.values(project.images).filter(Boolean);
+  }
+
+  if (project.image) {
+    return [project.image];
+  }
+
+  if (project.mobileImage) {
+    return [project.mobileImage];
+  }
+
+  return ["/placeholder.svg?height=400&width=600"];
+}
+
+export const projectsData: ProjectRecord[] = [
   {
     id: 1,
     title: "TrybeMarket",
     description:
-      "A web-based version of TrybeMarket — a decentralized campus marketplace where students can buy/sell goods, hire services, and build their personal brands within their university ecosystem.",
-    image: "/trybemarketWeb.png",
-    tags: ["React", "Firebase", "TailwindCSS"],
-    category: "web",
-    github: "https://github.com/trybenode/trybemarket-web",
-    live: "https://trybemarket.vercel.app/",
+      "A decentralized, cross-platform campus marketplace ecosystem. It enables students to buy/sell goods, hire services, and build personal brands, utilizing a unified backend to serve both web and mobile users seamlessly.",
+    platforms: ["web", "mobile"],
+    images: ["/trybemarketWeb.png", "/trybemarketMobile.png", "/ldx.png"],
+    links: {
+      github: {
+        web: "https://github.com/trybenode/trybemarket-web",
+        mobile: "https://github.com/trybenode/marketTrybe",
+      },
+      live: {
+        web: "https://trybemarket.vercel.app/",
+      },
+    },
+    tags: ["React Ecosystem", "Firebase", "TailwindCSS"],
     features: [
-      "Product/service listing dashboard for student vendors",
-      "Search and filter items by school or category",
-      "Integrated chat and order tracking",
-      "Safe payment workflow integration (Paystack/Flutterwave)",
-      "Campus-specific onboarding and user segmentation",
+      "Cross-platform product/service listing and management dashboard",
+      "Real-time, cross-platform chat and secure order tracking",
+      "Integrated safe payment workflows (Paystack/Flutterwave)",
+      "Campus-specific onboarding, segmentation, and school-based filtering",
+      "Strict seller verification system for ecosystem trust and safety",
     ],
-    technologies: ["React", "Next", "Node", "TailwindCSS", "Firestore"],
+    technologies: [
+      "GCP",
+      "React",
+      "React Native",
+      "Next.js",
+      "Node.js",
+      "TailwindCSS",
+      "Firebase/Firestore",
+      "Expo",
+    ],
     collaborated: true,
     challenge:
-      "Creating a secure, scalable platform that supports diverse student businesses while maintaining ease of use and low onboarding friction.",
+      "Architecting a secure, scalable ecosystem that supports diverse student businesses across both web and mobile devices, balancing low onboarding friction with high system trust and synchronized performance.",
     solution:
-      "Built a Firebase-backed web app with real-time data, school-based filtering, and modular components to support rapid scaling across campuses.",
+      "Engineered a centralized Firebase backend serving both a modular Next.js web application and a lightweight React Native mobile app, ensuring real-time data synchronization and a consistent user experience regardless of the device.",
   },
   {
     id: 2,
-    title: "TrybeMarket",
+    title: "Janco",
     description:
-      "A campus-focused e-commerce platform for students to buy and sell products, services, and skills within their school community — fostering trust and entrepreneurship.",
-    image: "/trybemarketm.png",
-    tags: ["React Native", "Firebase", "Expo Go"],
-    category: "mobile",
-    github: "https://github.com/trybenode/marketTrybe",
-    live: "https://trybemarket-demo.vercel.app",
+      "AI-powered janitorial services platform for Nigeria with on-demand and subscription cleaning, intelligent janitor matching, area-based pricing, and admin operations.",
+    image: "",
+    category: "AI-enabled service marketplace",
     features: [
-      "List and manage products or services from a mobile device",
-      "Chat with verified campus buyers and sellers",
-      "Secure in-app transactions and notifications",
-      "School-based market filtering",
-      "Seller verification for trust and safety",
+      "Cross-platform mobile booking app",
+      "FastAPI backend with async Python services",
+      "AI-powered area estimation using OpenCV + YOLO",
+      "Location-based cleaner assignment",
+      "Wallet and subscription billing",
+      "Supabase authentication and storage",
+      "Push notifications via Firebase and WhatsApp",
+      "Admin dashboard for operations and monitoring",
     ],
-    technologies: ["React Native", "noSql", "Push Notifications", "Expo"],
-    collaborated: true,
-    challenge:
-      "Building a mobile-first platform that balances speed, simplicity, and trust while supporting students with limited technical experience.",
-    solution:
-      "Developed a lightweight, intuitive mobile app using React Native and Firebase to ensure seamless onboarding, product listing, and communication for student users.",
+    tags: [
+      "AI",
+      "React Native",
+      "FastAPI",
+      "Supabase",
+      "Machine Learning",
+      "Logistics",
+      "Marketplace",
+    ],
+    technologies: [
+      "React Native",
+      "Expo",
+      "Next.js",
+      "FastAPI",
+      "Python",
+      "Supabase",
+      "PostgreSQL",
+      "OpenCV",
+      "YOLOv8",
+      "PyTorch",
+      "Firebase",
+      "Termii",
+      "Paystack",
+    ],
+    github: "",
+    live: "",
   },
   {
     id: 3,
+    title: "Vigalentee",
+    description:
+      "Vigalentee is a full-stack campus safety platform that enables students and staff to report incidents anonymously, receive AI-assisted severity classification, and trigger real-time alerts for campus security through a mobile app and web dashboard.",
+    image: "apps/mobile/assets/icon.png",
+    category: "Full-Stack / AI Safety Platform",
+    features: [
+      "Anonymous incident reporting",
+      "One-tap SOS emergency reporting",
+      "AI-based incident severity classification",
+      "GPS-based location capture",
+      "Real-time security dashboard alerts",
+      "Role-based authentication and access control",
+    ],
+    tags: [
+      "Campus Safety",
+      "Incident Reporting",
+      "AI",
+      "Real-Time Alerts",
+      "Security",
+      "Full-Stack",
+    ],
+    technologies: [
+      "TypeScript",
+      "React",
+      "React Native",
+      "Expo",
+      "Node.js",
+      "Express",
+      "Prisma",
+      "PostgreSQL",
+      "PostGIS",
+      "Python",
+      "FastAPI",
+      "Scikit-learn",
+      "Firebase Cloud Messaging",
+      "Leaflet",
+      "Zustand",
+      "Zod",
+    ],
+    github: "https://github.com/Abdul1013/vigalentee.git",
+    live: "",
+  },
+  {
+    id: 4,
+    title: "LibraFlow AI",
+    description:
+      "LibraFlow AI is an intelligent library resource management system built for Lead City University. It streamlines book cataloguing, circulation, borrowing, returns, and overdue tracking while integrating fuzzy book search and personalized recommendations for a smarter library experience.",
+    image: "https://placehold.co/1200x700/245F73/F2F0EF?text=LibraFlow+AI",
+    category: "AI-Powered Library Management System",
+    features: [
+      "Intelligent fuzzy search for books",
+      "Real-time book availability tracking",
+      "Personalized recommendations based on reading history",
+      "Automated due-date and overdue notifications",
+      "Role-based access for students and librarians",
+      "Analytics dashboard for library usage insights",
+      "Mobile-friendly responsive interface",
+      "Secure authentication and protected user access",
+    ],
+    tags: [
+      "FastAPI",
+      "Next.js",
+      "PostgreSQL",
+      "Library Tech",
+      "AI Recommendations",
+      "Full-Stack",
+      "University Project",
+    ],
+    technologies: [
+      "Python",
+      "FastAPI",
+      "SQLModel",
+      "PostgreSQL",
+      "Next.js 14",
+      "TypeScript",
+      "Tailwind CSS",
+      "Docker",
+      "Alembic",
+      "Railway",
+      "Vercel",
+    ],
+    github: "https://github.com/yourusername/libraflow",
+    live: "https://your-deployment-url.com",
+  },
+  {
+    id: 5,
+    title: "EventFlow",
+    description:
+      "EventFlow is a full-stack event ticketing and check-in platform that helps organizers manage events, issue QR tickets, optimize seating, and handle high-traffic check-ins reliably.",
+    category: "Full-Stack Event Management Platform",
+    features: [
+      "Monorepo architecture with shared types and UI packages",
+      "Admin dashboard for event, venue, ticket, and attendee management",
+      "Attendee web experience for event discovery and ticket access",
+      "React Native staff app for fast QR-based check-in",
+      "Python seat-allocation microservice for smart utilization",
+      "Redis-backed QR token validation and high-concurrency support",
+    ],
+    tags: [
+      "EventTech",
+      "Ticketing",
+      "QR Check-in",
+      "Seat Allocation",
+      "Monorepo",
+      "TypeScript",
+      "React",
+      "React Native",
+      "FastAPI",
+      "Prisma",
+      "PostgreSQL",
+      "Redis",
+    ],
+    technologies: [
+      "Node.js",
+      "Express",
+      "TypeScript",
+      "Prisma",
+      "PostgreSQL",
+      "Redis",
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "React Native",
+      "Expo",
+      "Python",
+      "FastAPI",
+      "Docker",
+      "GitHub Actions",
+      "Render",
+      "Vercel",
+    ],
+    gitHub: "https://github.com/your-username/eventflow_backend",
+    live: "https://eventflow-api-n9a7.onrender.com/api/v1",
+  },
+  {
+    id: 6,
+    title: "Interactive Bulletin Management System",
+    description:
+      "A role-aware full-stack bulletin platform designed to replace fragmented WhatsApp and memo-based communication at Lead City University with a single, secure, real-time announcement system for students, staff, and administrators.",
+    category: "Full-Stack Web Application",
+    features: [
+      "Role-based access control for guest, student, staff, and admin interfaces",
+      "Drafting, approval, publishing, and archival workflow for announcements",
+      "Real-time updates and notifications powered by Socket.IO",
+      "Comments, reactions, and acknowledgement tracking for engagement",
+      "Analytics dashboard for admin monitoring and post-performance insights",
+      "Secure authentication and API protection with JWT, Redis, and rate limiting",
+    ],
+    tags: [
+      "University",
+      "Bulletin Board",
+      "Role-Based Access Control",
+      "Real-Time",
+      "Analytics",
+      "Full-Stack",
+    ],
+    technologies: [
+      "React 18",
+      "Vite",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js 20",
+      "Express 5",
+      "MongoDB",
+      "Mongoose",
+      "Redis",
+      "Socket.IO",
+      "JWT",
+      "Cloudinary",
+      "Resend",
+      "React Query",
+      "shadcn/ui",
+      "TipTap",
+      "Recharts",
+    ],
+    gitHub: "https://github.com/abdul1013/IBMS",
+    live: "https://ibms.online/",
+  },
+  {
+    id: 7,
+    title: "Voxza",
+    description:
+      "A full-stack AI-powered video journaling platform that lets users record short video entries, and receive automatic transcription, summarization, mood analysis, and semantic search insights through a React Native mobile app.",
+    image: "",
+    category: "Full-Stack AI App",
+    features: [
+      "Short-video capture and upload",
+      "AI transcription and content analysis",
+      "Emotion, mood, and action-item extraction",
+      "Semantic search across journal entries",
+      "Secure authentication, storage, and sharing",
+      "Background processing with Celery",
+    ],
+    tags: [
+      "AI",
+      "Video",
+      "FastAPI",
+      "React Native",
+      "Expo",
+      "Python",
+      "Celery",
+      "PostgreSQL",
+    ],
+    technologies: [
+      "Python",
+      "FastAPI",
+      "SQLAlchemy",
+      "PostgreSQL",
+      "Celery",
+      "Redis",
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "TanStack Query",
+      "Zustand",
+      "OpenAI/Whisper",
+      "Google Cloud Storage",
+      "Supabase",
+    ],
+    gitHub: "",
+    live: "",
+  },
+
+  {
+    id: 8,
     title: "LDX Streetwear",
     description:
       "A modern e-commerce platform for LDX — a contemporary streetwear fashion brand offering curated collections of urban apparel, accessories, and limited-edition drops for fashion-forward individuals.",

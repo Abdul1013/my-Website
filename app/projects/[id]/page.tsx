@@ -14,9 +14,14 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { ProjectGallery } from "@/components/project-gallery";
 import { projectsData } from "@/lib/projects-data";
 
-export default function ProjectDetailPage({ params}) {
+export default function ProjectDetailPage({
+  params,
+}: {
+  params: { id: string };
+}) {
   const project = projectsData.find((p) => p.id.toString() === params.id);
 
   if (!project) {
@@ -54,14 +59,7 @@ export default function ProjectDetailPage({ params}) {
           <p className="text-xl text-muted-foreground">{project.description}</p>
         </div>
 
-        <div className="relative w-full h-[400px] mb-12 rounded-lg overflow-hidden">
-          <Image
-            src={project.image || "/placeholder.svg?height=800&width=1200"}
-            alt={project.title}
-            fill
-            className="object-cover"
-          />
-        </div>
+        <ProjectGallery project={project} />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
           <Card>
@@ -118,15 +116,15 @@ export default function ProjectDetailPage({ params}) {
           <div className="prose prose-lg dark:prose-invert max-w-none">
             <p>
               The {project.title} was developed to address{" "}
-              {project.challenge.toLowerCase()} This project showcases my skills
-              in {project.technologies.slice(0, 3).join(", ")}, and other
-              technologies.
+              {(project.challenge ?? "").toLowerCase()} This project showcases
+              my skills in {project.technologies.slice(0, 3).join(", ")}, and
+              other technologies.
             </p>
 
             <p>
               During development, I focused on creating a solution that would be
               both effective and user-friendly. The approach involved{" "}
-              {project.solution.toLowerCase()}
+              {(project.solution ?? "").toLowerCase()}
             </p>
 
             <p>
@@ -183,10 +181,7 @@ export default function ProjectDetailPage({ params}) {
                 >
                   <div className="relative h-48">
                     <Image
-                      src={
-                        relatedProject.image ||
-                        "/placeholder.svg?height=300&width=500"
-                      }
+                      src={getProjectImages(relatedProject)[0]}
                       alt={relatedProject.title}
                       fill
                       className="object-cover"

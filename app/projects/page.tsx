@@ -6,8 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardFooter } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { projectsData } from "@/lib/projects-data";
-import { number } from "zod";
+import { getProjectImages, projectsData } from "@/lib/projects-data";
 
 export default function ProjectsPage() {
   return (
@@ -93,22 +92,25 @@ type Project = {
   title: string;
   description: string;
   image?: string;
-  category: string;
+  images?: string[] | Record<string, string>;
+  category?: string;
   features: string[];
   tags: string[];
   technologies: string[];
-  github: string;
-  live: string;
+  github?: string;
+  live?: string;
 };
 
 function ProjectCard({ project }: { project: Project }) {
+  const projectImages = getProjectImages(project);
+
   return (
     <Card className="w-full rounded-none overflow-hidden border-0 shadow-md hover:shadow-lg transition-shadow">
       <div className="flex flex-col">
               {/* <div className="grid grid-cols-1 lg:grid-cols-5 gap-6"> */}
         <div className="flex w-full relative h-64 ">
           <Image
-            src={project.image || "/placeholder.svg?height=400&width=600"}
+            src={projectImages[0]}
             alt={project.title}
             fill
             className="object-contain"

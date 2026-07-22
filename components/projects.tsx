@@ -14,7 +14,7 @@ import { Tabs, TabsContent, } from "@/components/ui/tabs";
 import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { projectsData } from "@/lib/projects-data";
+import { getProjectImages, projectsData } from "@/lib/projects-data";
 
 export default function Projects() {
   const [activeTab, setActiveTab] = useState("all");
@@ -49,7 +49,10 @@ export default function Projects() {
 
         <TabsContent value={activeTab} className="mt-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredProjects.map((project, index) => (
+            {filteredProjects.map((project) => {
+              const projectImages = getProjectImages(project);
+
+              return (
               <motion.div
                 key={project.id}
                 className="project-card"
@@ -60,7 +63,7 @@ export default function Projects() {
                 <Card className="h-full flex flex-col border-0 overflow-hidden">
                   <div className="relative h-48 w-full overflow-hidden">
                     <Image
-                      src={project.image || "/placeholder.svg"}
+                      src={projectImages[0]}
                       alt={project.title}
                       width={400}
                       height={250}
@@ -121,7 +124,8 @@ export default function Projects() {
                   </CardFooter>
                 </Card>
               </motion.div>
-            ))}
+              );
+            })}
           </div>
         </TabsContent>
       </Tabs>
